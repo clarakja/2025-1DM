@@ -29,13 +29,13 @@ elif menu == "진리표 생성":
     inputs = list(product([True, False], repeat=2))
     truth_table = []
     for a, b in inputs:
-    truth_table.append({
-        "A": a,
-        "B": b,
-        "A AND B": a and b,
-        "A OR B": a or b,
-        "NOT A": not a
-    })
+        truth_table.append({
+            "A": a,
+            "B": b,
+            "A AND B": a and b,
+            "A OR B": a or b,
+            "NOT A": not a
+        })
 
     # 진리표 출력
     st.write("**진리표**")
