@@ -27,6 +27,7 @@ if menu == "기본 논리 연산":
 elif menu == "진리표 생성":
     st.header("진리표 생성")
     inputs = list(product([True, False], repeat=2))
+    truth_table = []
     for a, b in inputs:
     truth_table.append({
         "A": a,
