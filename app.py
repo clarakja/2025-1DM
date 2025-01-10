@@ -18,7 +18,7 @@ menu = st.sidebar.selectbox("메뉴 선택", [
 if menu == "기본 논리 연산":
     st.header("기본 논리 연산")
     a = st.checkbox("A (True/False)", value=True)
-    b = st.checkbox("B (True/False)", value=False)
+    b = st.checkbox("B (True/False)", value=True)
     st.write(f"**A AND B:** {a and b}")
     st.write(f"**A OR B:** {a or b}")
     st.write(f"**NOT A:** {not a}")
@@ -27,10 +27,18 @@ if menu == "기본 논리 연산":
 elif menu == "진리표 생성":
     st.header("진리표 생성")
     inputs = list(product([True, False], repeat=2))
-    st.write("**진리표**")
-    st.write("A\tB\tA AND B\tA OR B\tNOT A")
     for a, b in inputs:
-        st.write(f"{a}\t{b}\t{a and b}\t{a or b}\t{not a}")
+    truth_table.append({
+        "A": a,
+        "B": b,
+        "A AND B": a and b,
+        "A OR B": a or b,
+        "NOT A": not a
+    })
+
+    # 진리표 출력
+    st.write("**진리표**")
+    st.table(truth_table)
 
 # 3. 논리 회로 시뮬레이션
 elif menu == "논리 회로 시뮬레이션":
