@@ -17,7 +17,7 @@ def is_prime_with_reason(n):
         if n % (i + 2) == 0:
             return False, f"{n}은(는) {i + 2}로 나누어 떨어지므로 소수가 아닙니다."
         i += 6
-    return True, f"{n}은(는) 어떠한 수로도 나누어 떨어지지 않으므로 소수입니다."
+    return True, f"{n}은(는) 자신을 제외한 어떠한 수로도 나누어 떨어지지 않으므로 소수입니다."
 
 def find_primes_up_to(limit):
     """주어진 범위 내의 소수를 찾는 함수"""
