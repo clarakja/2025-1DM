@@ -40,8 +40,8 @@ if menu == "소수 판별":
 
     if st.button("소수 여부 확인"):
         is_prime, reason = is_prime_with_reason(number)
-            st.success(f"{number}은(는) 소수입니다! \\n 이유: {reason}")
-        else:
+        st.success(f"{number}은(는) 소수입니다! \\n 이유: {reason}")
+    else:
             st.error(f"{number}은(는) 소수가 아닙니다.  \\n 이유: {reason}")
 # 소수 생성
 elif menu == "소수 생성":
