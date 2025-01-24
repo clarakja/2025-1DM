@@ -2,3 +2,5 @@ streamlit
 graphviz
 networkx
 matplotlib
+random
+collections
