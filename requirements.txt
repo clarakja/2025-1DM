@@ -1,3 +1,4 @@
 streamlit
 graphviz
 networkx
+matplotlib
